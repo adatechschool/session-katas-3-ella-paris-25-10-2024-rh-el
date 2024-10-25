@@ -100,7 +100,7 @@ function countPoke(arr) {
     return arr.length
 }
 const pokeNumber = countPoke(pokemonArray)
-console.log(`there are ${pokeNumber} pokemons!`);
+// console.log(`there are ${pokeNumber} pokemons!`);
 
 
 // weight > 10kg?
@@ -115,7 +115,7 @@ function filterWeight(arr) {
     return pokeNames
 }
 const fattyPokes = filterWeight(pokemonArray)
-console.log(`there are ${fattyPokes.length} fatty pokemons!`);
+// console.log(`there are ${fattyPokes.length} fatty pokemons!`);
 // console.log(`the fat ones: ${fattyPokes}`);
 
 
@@ -127,5 +127,19 @@ function filterByWeight(arr) {
       });
     return sortedArr
 }
-const filteredByWeight = filterByWeight(pokemonArray)
+// const filteredByWeight = filterByWeight(pokemonArray)
 // console.log(filteredByWeight);
+
+
+
+// return evolution
+function returnEvolution(pokemon) {
+    let evolutions = []
+    if (pokemon.next_evolution) {
+        pokemon.next_evolution.forEach(element => {
+            evolutions.push(element['name'])
+        });
+    }  
+    return evolutions
+}
+// console.log(returnEvolution(pokemonArray[0]))
