@@ -1,12 +1,30 @@
 {
-  "name": "session-katas-3-ella-paris-25-10-2024-rh-el",
-  "version": "1.0.0",
-  "main": "model.js",
+  "name": "pokedec",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "type": "module"
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.13",
+    "globals": "^15.11.0",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.9"
+  }
 }

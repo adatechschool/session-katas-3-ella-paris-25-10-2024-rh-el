@@ -1,5 +1,5 @@
 // import {Pokemon} from "./model.js";
-import data from "./data.json" assert { type: 'json'}
+import data from "../data.json" assert { type: 'json'}
 
 
 class Pokemon {
@@ -23,55 +23,12 @@ class Pokemon {
     }
 }
 
-const formattedUrl = `https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json`;
 
-// const handleFetch = async (url) => {
-//     const api = await fetch(url);
-//     data = await api.json()
-//     return await data
-// };
-
-// const fetchExec = async () => {
-//     const rawData = await handleFetch(formattedUrl)
-//     return rawData
-// }
-
-
-// function extractPrevEvolution(arr) {
-//     let prev_evolution= []
-//     if (arr !== null) {
-//         for (const element in arr) {
-//             prev_evolution.push(arr[element])
-            
-//         }
-//     } else {
-//         prev_evolution = arr
-//     }
-//     return prev_evolution
-// }
-
-// function extractNextEvolution(arr) {
-//     let next_evolution= []
-//     if (arr !== null) {
-//         for (const element in arr) {
-//             next_evolution.push(arr[element])
-//         }
-//     } else {
-//         next_evolution = arr
-//     }
-//     return next_evolution
-// }
 
 
 let pokemonArray = []
 
-
-
 for (let i = 0; i<data['pokemon'].length; i++) {
-
-    // let prev_evolution = extractPrevEvolution(data['pokemon'][i]['prev_evolution'])
-    // let next_evolution = extractNextEvolution(data['pokemon'][i]['next_evolution'])
-
 
     // how to associate a new Pokemon to a dynamic variable name?
     const newPokemon = new Pokemon (
@@ -143,3 +100,5 @@ function returnEvolution(pokemon) {
     return evolutions
 }
 // console.log(returnEvolution(pokemonArray[0]))
+
+export default pokemonArray
